@@ -1,0 +1,72 @@
+#private-header-placeholder ul{
+    display      : inline-block;
+}
+#private-header-placeholder ul li {
+    display      : inline-block;
+    padding      : 5px;
+}
+
+
+#private-header-placeholder {
+   float:left;
+}
+.candidate-positions{
+    background   : white;
+    padding      : 10px;
+    border-bottom: solid #dedede 1px;
+    overflow     : hidden;   
+}
+.position{
+    display      : inline-block;
+    padding      : 10px; 
+    font-weight  : bold;
+    width        : 150px;
+    text-align   : center;
+}
+.company{
+    padding      : 10px;
+    display      : inline-block;
+    width        : 150px;
+    text-align   : center;
+}
+.status{
+    padding     : 10px;
+    display     : inline-block;
+    width       : 150px;
+    text-align  : center;
+}
+.jobid{
+   padding     : 10px;
+   display     : inline-block;
+   width       : 100px;
+   text-align  : center;   
+}
+.candidate-messages{
+    background   : white;
+    padding      : 10px;
+    border-bottom: solid #dedede 1px;
+    overflow     : hidden;    
+}
+.col-sm{
+    text-align: left;
+}
+.sender-fname{
+    display      : inline-block;
+    padding      : 10px;  
+    text-align   : left;
+}
+.sender-lname{
+    display      : inline-block;
+    padding      : 10px;  
+    text-align   : left;
+}
+.sender-company{
+    display      : inline-block;
+    padding      : 10px;  
+    text-align   : left;  
+}
+.message{
+    display:block;
+     padding      : 10px;  
+    text-align   : left;
+}
