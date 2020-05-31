@@ -1,0 +1,73 @@
+CREATE DATABASE monster;
+
+CREATE TABLE monster.users(
+id         INTEGER AUTO_INCREMENT PRIMARY KEY,  
+username    VARCHAR(256) NOT NULL,
+email       VARCHAR(256) NOT NULL,
+password    VARCHAR(256) NOT NULL,
+role        VARCHAR(256) NOT NULL
+);
+
+CREATE TABLE monster.user_personal_data(
+user_id     INTEGER  PRIMARY KEY, 
+fname       VARCHAR(256),
+lname       VARCHAR(256),
+city        VARCHAR(256),
+age         VARCHAR(256),
+education   VARCHAR(256)
+
+);
+
+CREATE TABLE monster.hr_personal_data(
+hr_id       INTEGER  PRIMARY KEY, 
+fname       VARCHAR(256),
+lname       VARCHAR(256),
+city        VARCHAR(256),
+age         VARCHAR(256),
+company     VARCHAR(256)
+
+);
+
+CREATE TABLE monster.employer(
+id          INTEGER AUTO_INCREMENT PRIMARY KEY,
+company     VARCHAR(256) NOT NULL,
+industry    VARCHAR(256) NOT NULL,
+description TEXT         NOT NULL,
+password    VARCHAR(256) NOT NULL,
+role        VARCHAR(256) NOT NULL
+
+);
+
+CREATE TABLE monster.job_posts(
+id          INTEGER AUTO_INCREMENT PRIMARY KEY,
+industry     VARCHAR(256) NOT NULL,
+position    VARCHAR(256) NOT NULL,
+company     VARCHAR(256) NOT NULL,
+city        VARCHAR(256) NOT NULL,
+description TEXT         NOT NULL,
+company_id  INTEGER      NOT NULL
+);  
+CREATE TABLE monster.status(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+status VARCHAR(256)
+);
+
+CREATE TABLE monster.job_candidates(
+id           INTEGER AUTO_INCREMENT PRIMARY KEY,
+user_id      INTEGER,
+fname        VARCHAR(256),
+lname        VARCHAR(256),
+city         VARCHAR(256),
+age          VARCHAR(256),
+education    VARCHAR(256),
+status       VARCHAR(256),
+job_id       INTEGER,
+company_id   INTEGER 
+
+);
+CREATE TABLE monster.messages(
+id          INTEGER AUTO_INCREMENT PRIMARY KEY,
+user_id     INTEGER,
+hr_id      INTEGER,
+message    TEXT
+);
